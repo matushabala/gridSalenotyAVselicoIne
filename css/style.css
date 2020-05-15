@@ -12,6 +12,7 @@
 
 h1 {
   padding-bottom: 8px;
+  font-size: 30px;
 }
 .nav {
   background-color: var(--primary-color);
@@ -46,6 +47,7 @@ h1 {
 
   .main p {
     padding: 5px;
+    font-size: 18px;
   }
 a {
   text-decoration: none;
@@ -86,7 +88,7 @@ main a{
 
 .jeden-produkt {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-template-rows: 1fr;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
@@ -94,25 +96,35 @@ main a{
 
 .jeden-produkt-obrazok {
   place-self: center;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .index-clanky {
   display: grid;
   grid-template-columns: repeat(auto-fit, 350px);
-  grid-column-gap: 5px;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
   justify-content: center; 
 }
 
-.banner > img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
+.index-clanky img{
+  border: 1px solid black;
 }
 
+.index-clanky > div h2, h3, h4{
+  padding-left: 5px;
+  font-size: 30px;
+}
 .banner {
-  padding-bottom: 16px;
+  display: flex;
+  min-height: 150px;
+  width: auto;
+  height: auto;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(129,129,129,1) 100%);
+  padding-left: 8px;
+  margin-bottom: 8px;
+  align-items: center;
 }
 
 footer {
@@ -131,7 +143,7 @@ footer *{
 
 .kosik-grid {
   display: grid;
-  grid-template-columns: 150px minmax(0px, 1fr) 90px;
+  grid-template-columns: 150px minmax(0px, 1fr) 130px;
   overflow: hidden;
   grid-template-rows: 150px;
   grid-column-gap: 8px;
@@ -168,18 +180,19 @@ footer *{
 .kosik-grid-text-parent {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 75px);
+  grid-template-rows: 30px 90px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 
 .kosik-grid-nadpis {
   overflow: hidden;
-  margin-bottom: 1px;
+  margin-bottom: 3px;
 
 }
 .kosik-grid-popis {
   overflow: hidden;
+  margin-bottom: 3px;
 }
 .kosik-vsetky-produkty {
   display: grid;
@@ -213,4 +226,17 @@ footer *{
   button {
     visibility: hidden;
   }
+}
+
+.clanok > img {
+  border-bottom: 1px solid;
+}
+
+.zoznam-produktov {
+  display: grid;
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
 }
